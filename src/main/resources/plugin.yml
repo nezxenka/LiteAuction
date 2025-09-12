@@ -2,6 +2,7 @@ name: LiteAuction
 version: '1.0'
 main: ru.nezxenka.liteauction.LiteAuction
 api-version: '1.16'
+author: nezxenka
 softdepend:
   - StickEco
   - Vault
