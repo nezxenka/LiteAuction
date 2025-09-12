@@ -98,63 +98,48 @@
     </repositories>
 
     <dependencies>
-        <!-- Paper API -->
         <dependency>
             <groupId>com.destroystokyo.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>${paper.version}</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Spigot NMS (после ручной установки) -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Mojang Authlib -->
         <dependency>
             <groupId>com.mojang</groupId>
             <artifactId>authlib</artifactId>
             <version>1.5.25</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Database -->
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>5.1.0</version>
             <scope>compile</scope>
         </dependency>
-
-        <!-- Redis -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>4.3.1</version>
             <scope>compile</scope>
         </dependency>
-
-        <!-- Vault API -->
         <dependency>
             <groupId>com.github.MilkBowl</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>1.7</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- Local JAR dependencies -->
         <dependency>
             <groupId>org.dimasik</groupId>
             <artifactId>stickeco</artifactId>
@@ -162,7 +147,6 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/StickEco.jar</systemPath>
         </dependency>
-
         <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
@@ -170,8 +154,6 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/PlaceholderAPI.jar</systemPath>
         </dependency>
-
-        <!-- JSON parsing -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
