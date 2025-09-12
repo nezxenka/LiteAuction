@@ -20,7 +20,7 @@ import ru.nezxenka.liteauction.backend.redis.RedisManager;
 import ru.nezxenka.liteauction.backend.utils.ContainerUtil;
 import ru.nezxenka.liteauction.backend.utils.Parser;
 import ru.nezxenka.liteauction.economy.EconomyEditor;
-import ru.nezxenka.liteauction.economy.impl.StickEco;
+import ru.nezxenka.liteauction.economy.impl.LuckyEco;
 import ru.nezxenka.liteauction.economy.impl.VaultEco;
 import ru.nezxenka.liteauction.frontend.commands.CommandExecutor;
 import ru.nezxenka.liteauction.frontend.commands.impl.*;
@@ -89,8 +89,8 @@ public final class LiteAuction extends JavaPlugin {
     }
 
     private void setupEconomy(){
-        if(ConfigManager.getECONOMY_EDITOR().equalsIgnoreCase("StickEco")){
-            economyEditor = new StickEco();
+        if(ConfigManager.getECONOMY_EDITOR().equalsIgnoreCase("LuckyEco")){
+            economyEditor = new LuckyEco();
         }
         else{
             economyEditor = new VaultEco();
