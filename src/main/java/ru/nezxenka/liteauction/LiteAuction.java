@@ -42,7 +42,6 @@ public final class LiteAuction extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
         instance = this;
 
         new UpdateChecker(this, super.getFile()).checkForUpdates();
@@ -141,7 +140,6 @@ public final class LiteAuction extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
         for(org.bukkit.entity.Player player : Bukkit.getOnlinePlayers()){
             if(ContainerUtil.hasActiveContainer(player)){
                 Inventory inventory = ContainerUtil.getActiveContainer(player);
