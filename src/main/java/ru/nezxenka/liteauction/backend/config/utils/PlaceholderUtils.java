@@ -1,0 +1,32 @@
+package ru.nezxenka.liteauction.backend.config.utils;
+
+import lombok.experimental.UtilityClass;
+import me.clip.placeholderapi.PlaceholderAPI;
+import org.bukkit.entity.Player;
+import ru.nezxenka.liteauction.backend.config.Pair;
+import ru.nezxenka.liteauction.backend.utils.format.Parser;
+
+@UtilityClass
+public class PlaceholderUtils {
+    @SafeVarargs
+    public static String replace(String origin, boolean applyParser, Pair<String, String>... replaces){
+        for(Pair<String, String> replace : replaces){
+            while (origin.contains(replace.getLeft())) {
+                origin = origin.replace(replace.getLeft(), replace.getRight());
+            }
+        }
+        if(applyParser) origin = Parser.color(origin);
+        return origin;
+    }
+
+    @SafeVarargs
+    public static String replace(Player source, String origin, boolean applyParser, Pair<String, String>... replaces){
+        for(Pair<String, String> replace : replaces){
+            while (origin.contains(replace.getLeft())) {
+                origin = origin.replace(replace.getLeft(), replace.getRight());
+            }
+        }
+        if(applyParser) origin = Parser.color(origin);
+        return PlaceholderAPI.setPlaceholders(source, origin);
+    }
+}
