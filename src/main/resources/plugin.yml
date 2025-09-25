@@ -1,0 +1,12 @@
+name: LiteAuction
+version: '1.0'
+main: ru.nezxenka.liteauction.LiteAuction
+api-version: '1.16'
+softdepend:
+  - LuckyEco
+  - Vault
+commands:
+  ah:
+    aliases:
+      - auc
+      - auction
